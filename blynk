@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /home/pi/blynk-server
+sudo java -jar server-0.34.1-java8.jar -dataFolder /home/pi/blynk-server/data
+
