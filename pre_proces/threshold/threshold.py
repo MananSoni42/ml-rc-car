@@ -5,7 +5,7 @@ from PIL import Image
 
 im = Image.open(sys.argv[1])
 im = im.convert('L')
-
+print(im.size)
 def threshold(G,im):
     P = im.size[0]*im.size[1]
 
