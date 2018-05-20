@@ -16,7 +16,25 @@ def convolve(T,im):
 
 im = Image.open(sys.argv[1])
 im = im.convert('L')
-T = [[1,1,1,1,1],[1,-3,3,-3,1],[1,-3,8,-3,1],[1,-3,3,-3,1],[1,1,1,1,1]]
+#Cool convolutions to try
+"""
+-1-1-1
+-1 8-1
+-1-1-1
+"""
+"""
+-1-1-1-1-1
+-1 1 1 1-1
+-1 1 8 1-1
+-1 1 1 1-1
+-1-1-1-1-1
+"""
+"""
+-2 1-2
+ 1 4 1
+-2 1-2
+"""
+T = [[-2,-2],[-1,-1],[1,1],[2,2]]
 new = convolve(T,im)
 new = Image.fromarray(255*new/np.max(new))
 print('Convolution:\n',np.array(T))

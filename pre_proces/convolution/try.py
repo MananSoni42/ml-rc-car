@@ -16,8 +16,8 @@ def convolve(T,im):
 
 im = Image.open(sys.argv[1])
 im = im.convert('L')
-T1 = [[-1,1],[-1,1]]
-T2 = [[-1,-1],[1,1]]
+T1 = [[-1,-1],[1,1]]
+T2 = [[-1,1],[-1,1]]
 new1 = convolve(T1,im)
 new2 = convolve(T2,im)
 new = new1 + new2
